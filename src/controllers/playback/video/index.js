@@ -291,8 +291,8 @@ import { setBackdropTransparency, TRANSPARENCY_LEVEL } from '../../../components
         }
 
         function showMainOsdControls() {
-            if (!currentVisibleMenu) {
-                const elem = osdBottomElement;
+            const elem = osdBottomElement;
+            if (elem.classList.contains('videoOsdBottom-hidden') {
                 currentVisibleMenu = 'osd';
                 clearHideAnimationEventListeners(elem);
                 elem.classList.remove('hide');
@@ -308,8 +308,8 @@ import { setBackdropTransparency, TRANSPARENCY_LEVEL } from '../../../components
         }
 
         function hideMainOsdControls() {
-            if (currentVisibleMenu === 'osd') {
-                const elem = osdBottomElement;
+            const elem = osdBottomElement;
+            if (!elem.classList.contains('videoOsdBottom-hidden') {
                 clearHideAnimationEventListeners(elem);
                 elem.classList.add('videoOsdBottom-hidden');
 
